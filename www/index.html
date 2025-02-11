@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+        var valor01, valor02, resultado
+        function somar() {
+            valor01 = parseInt(document.getElementById('valor01').value)
+            valor02 = parseInt(document.getElementById('valor02').value)
+
+            resultado = valor01 + valor02
+
+            document.getElementById('resultado').innerHTML = resultado
+        }
     </script>
 </head>
 <body>
-	<h1>OLÁ MUNDO</h1>
+	<h1>CALCULADORA</h1>
+    <input type="text" placeholder="Insira o Primeiro Valor" id="valor01">
+    <input type="text" placeholder="Insira o Segundo Valor" id="valor02">
+    <input type="button" value="SOMAR" id="btnSomar" onclick="somar()">
+    <h1 id="resultado"></h1>
 </body>
 </html>
